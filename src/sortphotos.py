@@ -158,7 +158,7 @@ def sortPhotos(src_dir, dest_dir, extensions, sort_type, move_files, removeDupli
         # get extension for types that may have EXIF data
         root, ext = os.path.splitext(src_file)
 
-        if ext.lower() in ['.jpg', '.jpeg', '.tiff']:
+        if ext.lower() in ['.jpg', '.jpeg', '.tiff', '.nef']:
 
             tags = exifread.process_file(f, details=False)
 
